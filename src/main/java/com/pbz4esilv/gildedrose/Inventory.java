@@ -22,7 +22,6 @@ public class Inventory {
 
     }
 
-    boolean concert_achieved = false;
     public void updateQuality() {
 
         for (int i = 0; i < items.length; i++) {
@@ -63,11 +62,6 @@ public class Inventory {
                 items[i].setSellIn(items[i].getSellIn() - 1);
             }
 
-            if (items[i].getSellIn() == 0 && items[i].getName() == "Backstage passes to a TAFKAL80ETC concert") {
-                concert_achieved = true;
-            }
-
-
             if (items[i].getSellIn() < 0) {
                 if (items[i].getName() != "Aged Brie" && items[i].getName() != "Backstage passes to a TAFKAL80ETC concert") {
 
@@ -85,16 +79,6 @@ public class Inventory {
                         items[i].setQuality(items[i].getQuality() - items[i].getQuality());
 
                     }
-                    if (concert_achieved == true) {
-
-                        if (items[i].getName() == "Aged Brie") {
-
-                            items[i].setQuality(items[i].getQuality() - items[i].getQuality());
-                        }
-
-                    }
-
-
                 }
             }
         }

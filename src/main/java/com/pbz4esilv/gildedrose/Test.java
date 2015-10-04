@@ -11,7 +11,7 @@ public class Test {
         //System.out.println(moi.toString());
         Inventory inv = new Inventory();
         inv.display();
-        for(int i =0 ; i<20;i++)
+        for(int i =0 ; i<50;i++)
         {
             inv.updateQuality();
             System.out.println(" ");
