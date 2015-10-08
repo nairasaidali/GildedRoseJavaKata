@@ -1,6 +1,6 @@
 package com.pbz4esilv.gildedrose;
 
-public class Item {
+public class Item implements QualityControl {
 
     private String name;
     private int sellIn;
@@ -42,5 +42,10 @@ public class Item {
     public String toString()
     {
         return this.name+"/"+this.sellIn+"/"+this.quality;
+    }
+
+    @Override
+    public void updateQuality() {
+
     }
 }
